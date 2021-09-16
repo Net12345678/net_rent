@@ -58,7 +58,7 @@ btn.addEventListener('click', (event)=>{
     let request_num2_100 = Math.round(request_num2);
     let request_num3 = Math.round(request_num1 * 60);
     let request_num4 = Math.round(request_num2 * 60);
-    let request_num5 = request_num2 * 60 + request_num3;
+    let request_num5 = Math.round(request_num2 * 60 + request_num3);
 
     request1.textContent = request_num1_100;
     request2.textContent = request_num2_100;

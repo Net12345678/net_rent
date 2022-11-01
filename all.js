@@ -36,33 +36,26 @@ btn.addEventListener('click', (event)=>{
     //     domlist[Object.keys(domlist)[i]].value = GetId(Object.keys(domlist)[i]).value;
     // }
     // console.log(domlist);
-    let a = GetId('a').value;
-    let b = GetId('b').value;
-    let c = GetId('c').value;
-    let d = GetId('d').value;
-    let e = GetId('e').value;
-    let rad = document.querySelector('input[name="exampleRadios"]:checked').value;
-    
+    let a = Number(GetId('a').value);   //坪數
+    let b = Number(GetId('b').value);   //業績
+    let c = Number(GetId('c').value);   //租金
+    let d = Number(GetId('d').value);   //毛利(%)
+    let e = Number(GetId('e').value);   //費用(%)
+    let f = Number(GetId('f').value);   //攤提(萬)
+    let g = Number(GetId('g').value);   //租期(年)
+    let h = Number(GetId('h').value);   //租期(月)
 
     let request1 = GetId('request1');
     let request2 = GetId('request2');
     let request3 = GetId('request3');
-    let request4 = GetId('request4');
-    let request5 = GetId('request5');
 
-
-
-    let request_num1 = (b * (d / 100)) - ((rad * a) / 60) - (b * (e / 100)) - c;
-    let request_num2 = ((b * (d / 100)) - (b * (e / 100)) - c);
+    let request_num1 = ((b * (d / 100)) - (b * (e / 100)) - c);
     let request_num1_100 = Math.round(request_num1);
-    let request_num2_100 = Math.round(request_num2);
-    let request_num3 = Math.round(request_num1 * 60);
-    let request_num4 = Math.round(request_num2 * 60);
-    let request_num5 = Math.round(request_num2 * 60 + request_num3);
+    let month = g * 12 + h;
+    let request_num2 = Math.round(request_num1 * month);
+    let request_num3 = Math.round(((f * a) / request_num1)* 10)/10;
 
     request1.textContent = request_num1_100;
-    request2.textContent = request_num2_100;
+    request2.textContent = request_num2;
     request3.textContent = request_num3;
-    request4.textContent = request_num4;
-    request5.textContent = request_num5;
 });

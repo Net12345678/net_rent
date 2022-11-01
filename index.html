@@ -5,81 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <title>租金程式</title>
+    <title>租金程式2.0</title>
 </head>
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-12 mb-2">
+            <div class="col-6 mb-2">
                 <label class="mb-0" for="a">坪數</label>
-                <input id="a" class="w-100" type="text" value="150">
+                <input id="a" class="w-100" type="text" value="400">
             </div>
-            <div class="col-12 mb-2">
+            <div class="col-6 mb-2">
                 <label class="mb-0" for="b">業績</label>
-                <input id="b" class="w-100" type="text" value="200">
+                <input id="b" class="w-100" type="text" value="400">
             </div>       
-            <div class="col-12 mb-2">
+            <div class="col-6 mb-2">
                 <label class="mb-0" for="c">租金</label>
-                <input id="c" class="w-100" type="text" value="20">
+                <input id="c" class="w-100" type="text" value="40">
             </div>          
-            <div class="col-12 mb-2">
+            <div class="col-6 mb-2">
                 <label class="mb-0" for="d">毛利(%)</label>
                 <input id="d" class="w-100" type="text" value="52.5">
             </div>       
-            <div class="col-12 mb-2">
+            <div class="col-6 mb-4">
                 <label class="mb-0" for="e">費用(%)</label>
                 <input id="e" class="w-100" type="text" value="16">
+            </div>
+            <div class="col-6 mb-4">
+                <label class="mb-0" for="f">裝潢費(萬/坪)</label>
+                <input id="f" class="w-100" type="text" value="5">
+            </div>
+            <div class="col-12">
+                <label class="mb-0 w-100 font-weight-bold h4" for="g">租期</label>
+            </div>
+            <div class="col-6 mb-4">
+                <label class="mb-0" for="g">年</label>
+                <input id="g" class="w-100" type="text" value="10">
+            </div>       
+            <div class="col-6 mb-4">
+                <label class="mb-0" for="h">月</label>
+                <input id="h" class="w-100" type="text" value="0">
             </div>            
-            <div class="col-12 my-2">
-                <label>裝潢費</label>
-                <div class="form-row">
-                    <div class="col-6">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="6">
-                            <label class="form-check-label" for="exampleRadios1">
-                                6萬/坪
-                            </label>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="7" checked>
-                            <label class="form-check-label" for="exampleRadios2">
-                                7萬/坪
-                            </label>
-                        </div>
-                    </div>
-                </div>               
-            </div>           
             <div class="col-12 mb-4">
                 <button id="btn-return" type="button" class="btn btn-primary w-100">運算</button>
             </div>     
             <div class="col-lg-9">
                 <div class="row">
                     <div class="col-6 mb-2">
-                        <p class="mb-0">單月獲利 (第1~5年)</p>
+                        <p class="mb-0">單月獲利(萬)</p>
                         <h3 id="request1"></h3>
                     </div>
                     <div class="col-6 mb-2">
-                        <p class="mb-0">單月獲利 (第6~10年)</p>
+                        <p class="mb-0">獲利總額(萬)</p>
                         <h3 id="request2"></h3>
                     </div>
                     <div class="col-6 mb-2">
-                        <p class="mb-0">第1~5年之獲利總額</p>
+                        <p class="mb-0">多久回本(月)</p>
                         <h3 id="request3"></h3>
                     </div>
-                    <div class="col-6 mb-2">
-                        <p class="mb-0">第6~10年之獲利總額</p>
-                        <h3 id="request4"></h3>
-                    </div>
                 </div>
-            </div>
-            <div class="col-lg-3">
-                <p class="mb-0">第1~10年之獲利總額</p>
-                <h3 id="request5"></h3>
-            </div>      
-            
-    </div>    
+            </div>   
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>

@@ -36,11 +36,11 @@ btn.addEventListener('click', (event)=>{
     //     domlist[Object.keys(domlist)[i]].value = GetId(Object.keys(domlist)[i]).value;
     // }
     // console.log(domlist);
-    let a = GetId('a').value;
-    let b = GetId('b').value;
-    let c = GetId('c').value;
-    let d = GetId('d').value;
-    let e = GetId('e').value;
+    let a = Number(GetId('a').value);   //坪數
+    let b = Number(GetId('b').value);   //業績
+    let c = Number(GetId('c').value);   //租金
+    let d = Number(GetId('d').value);   //毛利(%)
+    let e = Number(GetId('e').value);   //費用(%)
     let rad = document.querySelector('input[name="exampleRadios"]:checked').value;
     
 
